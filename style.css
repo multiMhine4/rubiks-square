@@ -12,4 +12,6 @@ h1 {
     color: white;
     -webkit-text-stroke: 1.5px black;
     text-shadow: 2px 2px 0 black;
+
+    margin: 20px;
 }
