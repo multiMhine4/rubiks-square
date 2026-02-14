@@ -1,3 +1,10 @@
+:root {
+    --cube-red:     #EA3960;
+    --cube-orange:  #EA8939;
+    --cube-blue:    #182F86;
+    --cube-green:   #458618;
+}
+
 body {
     background-image: url(images/bg-tile.svg);
     background-repeat: repeat;
