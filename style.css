@@ -22,3 +22,7 @@ h1 {
 
     margin: 20px;
 }
+#h1-red { color: var(--cube-red); }
+#h1-org { color: var(--cube-orange); }
+#h1-blu { color: var(--cube-blue); }
+#h1-gre { color: var(--cube-green); }
