@@ -26,3 +26,15 @@ h1 {
 #h1-org { color: var(--cube-orange); }
 #h1-blu { color: var(--cube-blue); }
 #h1-gre { color: var(--cube-green); }
+
+#midsection {
+    display: flex;
+    justify-content: center;
+}
+#square {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.tile {
+    filter: drop-shadow(9px 9px 0 black);
+}
