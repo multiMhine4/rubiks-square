@@ -58,6 +58,7 @@ h1 {
     width: 51px;
     height: 51px;
     background-color: var(--cube-gray);
+    opacity: 40%;
     clip-path: circle(25px);
 }
 .v-buttons {
