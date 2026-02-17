@@ -6,10 +6,16 @@
     --cube-gray:    #D9D9D9;
 }
 
+html { height: 100%; }
+
 body {
     background-image: url(images/bg-tile.svg);
     background-repeat: repeat;
     background-size: 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 h1 {
@@ -22,6 +28,8 @@ h1 {
     text-shadow: 2px 2px 0 black;
 
     margin: 20px;
+    position: fixed;
+    top: 0;
 }
 #h1-red { color: var(--cube-red); }
 #h1-org { color: var(--cube-orange); }
