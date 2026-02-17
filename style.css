@@ -3,6 +3,7 @@
     --cube-orange:  #EA8939;
     --cube-blue:    #182F86;
     --cube-green:   #458618;
+    --cube-gray:    #D9D9D9;
 }
 
 body {
@@ -39,7 +40,28 @@ h1 {
 #square {
     display: grid;
     grid-template-columns: 50% 50%;
+    margin-bottom: 5px;
 }
 .tile {
     filter: drop-shadow(9px 9px 0 black);
+}
+
+.button {
+    width: 51px;
+    height: 51px;
+    background-color: var(--cube-gray);
+    clip-path: circle(25px);
+}
+.v-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+.h-buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.v-buttons, .h-buttons {
+    gap: 30px;
 }
