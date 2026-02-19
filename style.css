@@ -14,8 +14,9 @@ body {
     background-size: 24px 24px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     height: 100%;
+    margin: 0 20px;
 }
 
 h1 {
@@ -27,9 +28,7 @@ h1 {
     -webkit-text-stroke: 1.5px black;
     text-shadow: 2px 2px 0 black;
 
-    margin: 20px;
-    position: fixed;
-    top: 0;
+    margin: 0;
 }
 #h1-red { color: var(--cube-red); }
 #h1-org { color: var(--cube-orange); }
