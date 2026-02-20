@@ -79,6 +79,7 @@ h1 {
     justify-content: end;
     gap: 32px;
     margin: 20px;
+    margin-bottom: 30px;
 }
 .util-button {
     width: 45px;
