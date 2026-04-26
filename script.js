@@ -1,3 +1,5 @@
+import Square from './square-util.js'
+
 const c0_buttons = document.querySelectorAll(".col0");
 const c1_buttons = document.querySelectorAll(".col1");
 const r0_buttons = document.querySelectorAll(".row0");
