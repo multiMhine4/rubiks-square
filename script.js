@@ -1,5 +1,7 @@
 import Square from './square-util.js'
 
+const Sqr = new Square( document.getElementById("square") );
+
 const c0_buttons = document.querySelectorAll(".col0");
 const c1_buttons = document.querySelectorAll(".col1");
 const r0_buttons = document.querySelectorAll(".row0");
@@ -37,5 +39,26 @@ for (const group of groups) {
                 htmlDOM.addEventListener("mouseup", toDefault(button), {once: true});
             });
         }); 
+    });
+}
+
+for (const button of c0_buttons) {
+    button.addEventListener("mousedown", () => {
+        Sqr.turn("L");
+    });
+}
+for (const button of c1_buttons) {
+    button.addEventListener("mousedown", () => {
+        Sqr.turn("R");
+    });
+}
+for (const button of r0_buttons) {
+    button.addEventListener("mousedown", () => {
+        Sqr.turn("U");
+    });
+}
+for (const button of r1_buttons) {
+    button.addEventListener("mousedown", () => {
+        Sqr.turn("D");
     });
 }
