@@ -87,4 +87,13 @@ h1 {
     height: 45px;
     background-color: var(--cube-gray);
     box-shadow: 4px 4px 0 black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#util-buttons img {
+    height: 60%;
+}
+#solve img {
+    margin-left: 2px;
 }
