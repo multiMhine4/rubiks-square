@@ -97,3 +97,11 @@ h1 {
 #solve img {
     margin-left: 2px;
 }
+.util-hover {
+    background-color: hsl(from var(--cube-gray) h s 70%);
+}
+.util-press {
+    /* background-color: hsl(from var(--cube-gray) h s 50%); */
+    box-shadow: none;
+    transform: translate(5px,5px);
+}
