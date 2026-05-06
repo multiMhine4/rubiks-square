@@ -112,3 +112,9 @@ h1 {
     box-shadow: none;
     transform: translate(5px,5px);
 }
+
+#square img, #util-buttons img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+}
