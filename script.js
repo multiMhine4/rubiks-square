@@ -66,21 +66,14 @@ for (const button of r1_buttons) {
 
 for (const util_button of util_buttons) {
     util_button.addEventListener("mouseenter", () => util_button.classList.toggle("util-hover"));
-    util_button.addEventListener("mouseleave", () => util_button.classList.toggle("util-hover"));
+    util_button.addEventListener("mouseleave", () => {
+        if (util_button.classList.contains("util-hover")) {
+            util_button.classList.toggle("util-hover");
+        }
+        if (util_button.classList.contains("util-press")) {
+            util_button.classList.toggle("util-press");
+        }
+    });
     util_button.addEventListener("mousedown", () => util_button.classList.toggle("util-press"));
     util_button.addEventListener("mouseup", () => util_button.classList.toggle("util-press"));
-}
-
-// Failsafe if mouse leaves the element during press
-for (const util_button of util_buttons) {
-    util_button.addEventListener("mouseenter", () => {
-        util_button.addEventListener("mouseleave", () => {
-            if (util_button.classList.contains("util-press")) {
-                util_button.classList.toggle("util-press");
-            }
-            if (util_button.classList.contains("util-hover")) {
-                util_button.classList.toggle("util-hover");
-            }
-        }, {once: true});
-    });
 }
