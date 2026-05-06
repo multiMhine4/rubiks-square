@@ -9,38 +9,37 @@ const r1_buttons = document.querySelectorAll(".row1");
 const util_buttons = document.querySelectorAll(".util-button");
 const htmlDOM = document.querySelector('html');
 
-const groups = [c0_buttons,c1_buttons,r0_buttons,r1_buttons];
+const buttonGroups = [c0_buttons,c1_buttons,r0_buttons,r1_buttons];
 
-function toDefault(button) {
-    return () => {
-        button.style.color = "var(--cube-gray)";
-        button.style.transform = "scale(1)";
-        if (button.matches(":hover")) {
-            button.style.opacity = "1.0";
-        } else {
-            button.style.opacity = "0.4";
-        }
-    }
-}
-
-for (const group of groups) {
-    group.forEach((elem) => 
+for (const buttons of buttonGroups) {
+    buttons.forEach((button) => 
         { 
-        elem.addEventListener("mouseover", () => {
-            group.forEach((button) => button.style.opacity = "1.0");
-        });
-        elem.addEventListener("mouseout", () => {
-            group.forEach((button) => button.style.opacity = "0.4");
-        });
-        elem.addEventListener("mousedown", () => {
-            group.forEach((button) => {
-                button.style.opacity = "1.0";
-                button.style.color = "#333333";
-                button.style.transform = "scale(0.7)";
-                htmlDOM.addEventListener("mouseup", toDefault(button), {once: true});
+            button.addEventListener("mouseenter", () => {
+                for (const button2 of buttons) {
+                    button2.classList.toggle("button-hover");
+                }
             });
-        }); 
-    });
+            button.addEventListener("mouseleave", () => {
+                for (const button2 of buttons) {
+                    if (button2.classList.contains("button-hover")) {
+                        button2.classList.toggle("button-hover");
+                    }
+                    if (button2.classList.contains("button-press")) {
+                        button2.classList.toggle("button-press");
+                    }
+                }
+            });
+            button.addEventListener("mousedown", () => {
+                for (const button2 of buttons) {
+                    button2.classList.toggle("button-press");
+                }
+            });
+            button.addEventListener("mouseup", () => {
+                for (const button2 of buttons) {
+                    button2.classList.toggle("button-press");
+                }
+            });
+        });
 }
 
 for (const button of c0_buttons) {

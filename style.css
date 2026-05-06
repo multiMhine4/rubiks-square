@@ -61,6 +61,13 @@ h1 {
     opacity: 40%;
     clip-path: circle(25px);
 }
+.button-hover {
+    opacity: 100%; 
+}
+.button-press {
+    transform: scale(0.7);
+}
+
 .v-buttons {
     display: flex;
     justify-content: center;
